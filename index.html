@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/06/001-blog/" itemprop="url">用github pages + hexo构建自己的博客网站(我的第一篇github pages博客)</a></h1>
+                <a class="post-title-link" href="/2018/11/06/001-blog/" itemprop="url">使用github pages + hexo构建自己的博客网站(我的第一篇github pages博客)</a></h1>
         
 
         <div class="post-meta">
@@ -300,7 +300,58 @@
       
         
           
-            <h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>-1.安装git<br>    <a href="&quot;https://git-scm.com/downloads&quot;">下载地址</a><br>-2.安装node<br>    <a href="&quot;http://nodejs.cn/download/&quot;">下载地址</a><br>-3.注册一个github帐号<br>    <a href="&quot;https://github.com&quot;">注册地址</a><br>-4.安装hexo</p>
+            <h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><pre><code>本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作...
+</code></pre><h3 id="一-准备工作"><a href="#一-准备工作" class="headerlink" title="一.准备工作"></a>一.准备工作</h3><h5 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h5><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载地址</a></p>
+<h5 id="2-安装node"><a href="#2-安装node" class="headerlink" title="2.安装node"></a>2.安装node</h5><p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载地址</a></p>
+<h5 id="3-注册一个github帐号"><a href="#3-注册一个github帐号" class="headerlink" title="3.注册一个github帐号"></a>3.注册一个github帐号</h5><p><a href="https://github.com" target="_blank" rel="noopener">注册地址</a>, 至于github怎么连通使用, 请自行百度, 本文章不做指导.</p>
+<h3 id="二-使用hexo构建博客网站"><a href="#二-使用hexo构建博客网站" class="headerlink" title="二.使用hexo构建博客网站"></a>二.使用hexo构建博客网站</h3><h5 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h5 id="2-初始化hexo"><a href="#2-初始化hexo" class="headerlink" title="2.初始化hexo"></a>2.初始化hexo</h5><p>打开git bash, 执行如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure></p>
+<p><strong>说明:</strong> 最好新建一个空文件夹, 切换到该目录执行hexo init 命令, 也可以使用 [folder] 参数指定一个路径作为你的博客目录.</p>
+<h5 id="3-本地服务启动"><a href="#3-本地服务启动" class="headerlink" title="3.本地服务启动"></a>3.本地服务启动</h5><p>hexo init完成之后, 一个简单的博客网站就完成了, ,并且自带了主题, 可以在本地启动hexo服务进行预览博客了.<br>执行如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
+<p><strong>说明:</strong> 如果报如下错误, 应是hexo server模块没有安装,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">Usage: hexo &lt;command&gt;</span><br></pre></td></tr></table></figure></p>
+<p>执行如下代码安装hexo server:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br><span class="line">或者:npm i hexo-server</span><br></pre></td></tr></table></figure></p>
+<p>重新执行hexo server即可, 启动之后, 默认运行在4000端口, 打开浏览器,输入: <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可预览。。。<br>如果端口被占用,执行: <strong> hexo -p 5000 server</strong> ,换成5000端口重新运行即可.</p>
+<h3 id="三-发布到github"><a href="#三-发布到github" class="headerlink" title="三.发布到github"></a>三.发布到github</h3><h5 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1.新建仓库"></a>1.新建仓库</h5><p>在你的github新建一个仓库, 仓库名格式必须是: <strong>username.github.io</strong></p>
+<h5 id="2-建立关联"><a href="#2-建立关联" class="headerlink" title="2.建立关联"></a>2.建立关联</h5><p>创建完成之后, 复制你的仓库地址,<br>然后打开你博客目录下的_config.yml文件，拉倒最下面，修改deploy为以下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:peterzhen40/peterzhen40.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p><strong>注:</strong> repository后面就是你刚才复制的仓库地址, 每个分号(“:”)后面有一个英文空格.</p>
+<h5 id="3-部署"><a href="#3-部署" class="headerlink" title="3.部署"></a>3.部署</h5><p>hexo部署到git我们需要安装hexo-deployer-git插件, 执行如下命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>执行如下命令进行部署:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d        ##部署,该命令等同于: hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p>部署完成之后, 就可以在 <a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 地址进行访问了…<br>以后的部署就是这三步了:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean    ##清除已经生成的静态页面, </span><br><span class="line">$ hexo g        ##重新生成静态页面, 该命令等同于: hexo generate</span><br><span class="line">$ hexo d        ##部署,该命令等同于: hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h3 id="四-其他相关"><a href="#四-其他相关" class="headerlink" title="四.其他相关"></a>四.其他相关</h3><h5 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h5><p>hexo初始化默认自带一个主题, 名为: landscape, 如果不喜欢, 可以更换.</p>
+<ol>
+<li>可以去 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a> 找一个自己喜欢的主题, 找到他的仓库地址, 复制仓库地址.</li>
+<li><p>切换到你的博客目录下的/themes/目录下, 执行如下代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone &quot;你复制的仓库地址&quot;        ##即把主题下载下来</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>找到博客目录下的 _config.yml 文件, 修改theme, theme后面就是你下载的主题名称,<br>(注意分号后面有个英文空格, 比如我的是: <strong>theme: hexo-theme-next</strong>)</p>
+</li>
+</ol>
+<h5 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &quot;name&quot;     ##新建一个博客文件, 会在source/_posts/下生成一个名叫&quot;name&quot;的md文件.</span><br></pre></td></tr></table></figure>
+<p>说明: [layout]用来指定文章的布局，默认是post, hexo默认有三种布局，每种布局的路径不同：</p>
+<table>
+<thead>
+<tr>
+<th>布局</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>post</td>
+<td>source/_posts</td>
+</tr>
+<tr>
+<td>page</td>
+<td>source</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>source/_drafts</td>
+</tr>
+</tbody>
+</table>
+<p>更多hexo知识请查看 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官方文档</a></p>
+<h5 id="markdown相关"><a href="#markdown相关" class="headerlink" title="markdown相关"></a>markdown相关</h5><p>自己百度去学习吧…</p>
 
           
         
