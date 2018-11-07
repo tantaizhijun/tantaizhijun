@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-07T05:06:56.614Z</updated>
+  <updated>2018-11-07T05:20:26.398Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/11/06/20181106/"/>
     <id>http://yoursite.com/2018/11/06/20181106/</id>
     <published>2018-11-06T07:48:43.000Z</published>
-    <updated>2018-11-07T05:06:56.614Z</updated>
+    <updated>2018-11-07T05:20:26.398Z</updated>
     
     <summary type="html">
     
@@ -76,9 +76,9 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h5 id=&quot;②-新建一个分类模块&quot;&gt;&lt;a href=&quot;#②-新建一个分类模块&quot; class=&quot;headerlink&quot; title=&quot;②.新建一个分类模块&quot;&gt;&lt;/a&gt;②.新建一个分类模块&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new page categories&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;-你会发现你的source文件夹下有了categorcies/index.md，打开index.md文件将title设置为title: 分类&lt;br&gt;-打开&lt;strong&gt;主题配置文件&lt;/strong&gt;_config.yml 找到menu，将categorcies取消注释&lt;br&gt;-要把文章归入分类只需在写文章时,在的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中,如:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: 分类测试文章标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;categories: 分类名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;-你会发现你的source文件夹下有了categorcies/index.md，打开index.md文件将title设置为title: 分类, type设置为”categories”&lt;br&gt;-打开&lt;strong&gt;主题配置文件&lt;/strong&gt;_config.yml 找到menu，将categorcies取消注释&lt;br&gt;-要把文章归入分类只需在写文章时,在的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中,如:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: 分类测试文章标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;categories: 分类名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h5 id=&quot;③-添加标签模块&quot;&gt;&lt;a href=&quot;#③-添加标签模块&quot; class=&quot;headerlink&quot; title=&quot;③.添加标签模块&quot;&gt;&lt;/a&gt;③.添加标签模块&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new page tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;-同上, 你会发现source文件夹下有了tags/index.md，打开index.md文件将title设置为title: 标签&lt;br&gt;-打开&lt;strong&gt;主题配置文件&lt;/strong&gt;_config.yml, 找到menu，将tags取消注释&lt;br&gt;-给文章添加标签, 只需在文章的顶部标题下方添加tags字段，即可自动创建标签名并归入对应的标签中&lt;/p&gt;
+&lt;p&gt;-同上, 你会发现source文件夹下有了tags/index.md，打开index.md文件将title设置为title: 标签, type设置为”tags”&lt;br&gt;-打开&lt;strong&gt;主题配置文件&lt;/strong&gt;_config.yml, 找到menu，将tags取消注释&lt;br&gt;-给文章添加标签, 只需在文章的顶部标题下方添加tags字段，即可自动创建标签名并归入对应的标签中&lt;/p&gt;
 &lt;h5 id=&quot;④-添加关于模块&quot;&gt;&lt;a href=&quot;#④-添加关于模块&quot; class=&quot;headerlink&quot; title=&quot;④.添加关于模块&quot;&gt;&lt;/a&gt;④.添加关于模块&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new page about&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;-同上, 你会发现source文件夹下有了about/index.md，打开index.md文件即可编辑关于你的信息。&lt;br&gt;-打开 主题配置文件 找到menu，将about取消注释&lt;/p&gt;
 &lt;h5 id=&quot;⑤-添加搜索功能&quot;&gt;&lt;a href=&quot;#⑤-添加搜索功能&quot; class=&quot;headerlink&quot; title=&quot;⑤.添加搜索功能&quot;&gt;&lt;/a&gt;⑤.添加搜索功能&lt;/h5&gt;&lt;p&gt;安装 hexo-generator-searchdb 插件&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-searchdb --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;

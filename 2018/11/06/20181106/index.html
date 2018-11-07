@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="水河澹澹的Blogs">
 <meta property="og:description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导. 二.使用hexo构建博客网站1.安装hexo1$ npm install -g hexo-cli 2.初始化hexo打">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T05:06:56.614Z">
+<meta property="og:updated_time" content="2018-11-07T05:20:26.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用github pages + hexo构建自己的博客网站">
 <meta name="twitter:description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导. 二.使用hexo构建博客网站1.安装hexo1$ npm install -g hexo-cli 2.初始化hexo打">
@@ -417,9 +417,9 @@
 </tbody>
 </table>
 <h5 id="②-新建一个分类模块"><a href="#②-新建一个分类模块" class="headerlink" title="②.新建一个分类模块"></a>②.新建一个分类模块</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
-<p>-你会发现你的source文件夹下有了categorcies/index.md，打开index.md文件将title设置为title: 分类<br>-打开<strong>主题配置文件</strong>_config.yml 找到menu，将categorcies取消注释<br>-要把文章归入分类只需在写文章时,在的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中,如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 分类测试文章标题</span><br><span class="line">categories: 分类名</span><br></pre></td></tr></table></figure></p>
+<p>-你会发现你的source文件夹下有了categorcies/index.md，打开index.md文件将title设置为title: 分类, type设置为”categories”<br>-打开<strong>主题配置文件</strong>_config.yml 找到menu，将categorcies取消注释<br>-要把文章归入分类只需在写文章时,在的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中,如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 分类测试文章标题</span><br><span class="line">categories: 分类名</span><br></pre></td></tr></table></figure></p>
 <h5 id="③-添加标签模块"><a href="#③-添加标签模块" class="headerlink" title="③.添加标签模块"></a>③.添加标签模块</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
-<p>-同上, 你会发现source文件夹下有了tags/index.md，打开index.md文件将title设置为title: 标签<br>-打开<strong>主题配置文件</strong>_config.yml, 找到menu，将tags取消注释<br>-给文章添加标签, 只需在文章的顶部标题下方添加tags字段，即可自动创建标签名并归入对应的标签中</p>
+<p>-同上, 你会发现source文件夹下有了tags/index.md，打开index.md文件将title设置为title: 标签, type设置为”tags”<br>-打开<strong>主题配置文件</strong>_config.yml, 找到menu，将tags取消注释<br>-给文章添加标签, 只需在文章的顶部标题下方添加tags字段，即可自动创建标签名并归入对应的标签中</p>
 <h5 id="④-添加关于模块"><a href="#④-添加关于模块" class="headerlink" title="④.添加关于模块"></a>④.添加关于模块</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
 <p>-同上, 你会发现source文件夹下有了about/index.md，打开index.md文件即可编辑关于你的信息。<br>-打开 主题配置文件 找到menu，将about取消注释</p>
 <h5 id="⑤-添加搜索功能"><a href="#⑤-添加搜索功能" class="headerlink" title="⑤.添加搜索功能"></a>⑤.添加搜索功能</h5><p>安装 hexo-generator-searchdb 插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure></p>
@@ -543,10 +543,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -554,10 +554,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
