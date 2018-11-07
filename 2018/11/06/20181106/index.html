@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导. 二.使用hexo构建博客网站1.安装hexo1$ npm install -g hexo-cli 2.初始化hexo打">
+<meta name="description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导.">
 <meta name="keywords" content="博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用github pages + hexo构建自己的博客网站">
 <meta property="og:url" content="http://yoursite.com/2018/11/06/20181106/index.html">
 <meta property="og:site_name" content="水河澹澹的博客站">
-<meta property="og:description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导. 二.使用hexo构建博客网站1.安装hexo1$ npm install -g hexo-cli 2.初始化hexo打">
+<meta property="og:description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T05:20:26.398Z">
+<meta property="og:updated_time" content="2018-11-07T10:36:19.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用github pages + hexo构建自己的博客网站">
-<meta name="twitter:description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导. 二.使用hexo构建博客网站1.安装hexo1$ npm install -g hexo-cli 2.初始化hexo打">
+<meta name="twitter:description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导.">
 
 
 
@@ -390,6 +390,7 @@
 <h3 id="一-准备工作"><a href="#一-准备工作" class="headerlink" title="一.准备工作"></a>一.准备工作</h3><h4 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h4><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载地址</a></p>
 <h4 id="2-安装node"><a href="#2-安装node" class="headerlink" title="2.安装node"></a>2.安装node</h4><p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载地址</a></p>
 <h4 id="3-注册一个github帐号"><a href="#3-注册一个github帐号" class="headerlink" title="3.注册一个github帐号"></a>3.注册一个github帐号</h4><p><a href="https://github.com" target="_blank" rel="noopener">注册地址</a>, 至于github怎么连通使用, 请自行百度, 本文章不做指导.</p>
+<a id="more"></a>
 <h3 id="二-使用hexo构建博客网站"><a href="#二-使用hexo构建博客网站" class="headerlink" title="二.使用hexo构建博客网站"></a>二.使用hexo构建博客网站</h3><h4 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <h4 id="2-初始化hexo"><a href="#2-初始化hexo" class="headerlink" title="2.初始化hexo"></a>2.初始化hexo</h4><p>打开git bash, 执行如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure></p>
 <p><strong>说明:</strong> 最好新建一个空文件夹, 切换到该目录执行hexo init 命令, 也可以使用 [folder] 参数指定一个路径作为你的博客目录.</p>
@@ -451,7 +452,6 @@
 <h5 id="⑨去掉文章目录标题的自动编号"><a href="#⑨去掉文章目录标题的自动编号" class="headerlink" title="⑨去掉文章目录标题的自动编号"></a>⑨去掉文章目录标题的自动编号</h5><p>我们自己写文章的时候一般都会自己带上标题编号，但是默认的主题会给我们带上编号，很是别扭，如何去掉呢？<br>打开主题配置文件，找到number, 设置为false即可, 如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Table Of Contents in the Sidebar</span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  number: false</span><br><span class="line"></span><br><span class="line">  # If true, all words will placed on next lines if header width longer then sidebar width.</span><br><span class="line">  wrap: false</span><br></pre></td></tr></table></figure></p>
 <p>更多hexo知识请查看 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官方文档</a><br>更多主题配置, 请查看<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">主题设置</a><br>更多hexo插件, 请查看<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">hexo插件</a></p>
 <h4 id="3-markdown语法"><a href="#3-markdown语法" class="headerlink" title="3.markdown语法"></a>3.markdown语法</h4><p>自己百度去学习吧…</p>
-<a id="more"></a>
 
       
     </div>
@@ -507,6 +507,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/20/20180820125210/" rel="next" title="远程过程调用（RPC）的原理与要考虑的问题">
+                <i class="fa fa-chevron-left"></i> 远程过程调用（RPC）的原理与要考虑的问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -582,7 +598,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -593,7 +609,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -604,7 +620,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
