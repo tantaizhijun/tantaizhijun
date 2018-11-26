@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="水河澹澹的博客站">
 <meta property="og:description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T10:36:19.425Z">
+<meta property="og:updated_time" content="2018-11-26T03:29:08.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用github pages + hexo构建自己的博客网站">
 <meta name="twitter:description" content="前言    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导.">
@@ -404,6 +404,7 @@
 <h4 id="3-部署"><a href="#3-部署" class="headerlink" title="3.部署"></a>3.部署</h4><p>hexo部署到git我们需要安装hexo-deployer-git插件, 执行如下命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
 <p>执行如下命令进行部署:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d        ##部署,该命令等同于: hexo deploy</span><br></pre></td></tr></table></figure></p>
 <p>部署完成之后, 就可以在 <a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 地址进行访问了…<br>以后的部署就是这三步了:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean    ##清除已经生成的静态页面, </span><br><span class="line">$ hexo g        ##重新生成静态页面, 该命令等同于: hexo generate</span><br><span class="line">$ hexo d        ##部署,该命令等同于: hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p><strong>说明:</strong><br>发布到github只需使用上面的hexo d 命令即可, 不要把本地源码发布到github, (如:IDEA本地local change的变动不用管,hexo会帮我们把生成的博客自动提交的)</p>
 <h3 id="四-其他相关"><a href="#四-其他相关" class="headerlink" title="四.其他相关"></a>四.其他相关</h3><h4 id="1-更换主题"><a href="#1-更换主题" class="headerlink" title="1.更换主题"></a>1.更换主题</h4><p>hexo初始化默认自带一个主题, 名为: landscape, 如果不喜欢, 可以更换.</p>
 <ol>
 <li>可以去 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a> 找一个自己喜欢的主题, 找到他的仓库地址, 复制仓库地址.</li>
