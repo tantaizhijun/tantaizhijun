@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>水河澹澹的博客站</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-11-26T02:54:23.597Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>tantaizhijun</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自己动手写mvc框架</title>
+    <link href="http://yoursite.com/2018/11/26/myself-MVC/"/>
+    <id>http://yoursite.com/2018/11/26/myself-MVC/</id>
+    <published>2018-11-26T02:45:42.000Z</published>
+    <updated>2018-11-26T02:54:23.597Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;自己动手写mvc框架&quot;&gt;&lt;a href=&quot;#自己动手写mvc框架&quot; class=&quot;headerlink&quot; title=&quot;自己动手写mvc框架&quot;&gt;&lt;/a&gt;自己动手写mvc框架&lt;/h3&gt;&lt;h4 id=&quot;spring源码的核心组件-IOC-AOP&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="spring" scheme="http://yoursite.com/categories/spring/"/>
+    
+    
+      <category term="mvc" scheme="http://yoursite.com/tags/mvc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用github pages + hexo构建自己的博客网站</title>
+    <link href="http://yoursite.com/2018/11/06/20181106/"/>
+    <id>http://yoursite.com/2018/11/06/20181106/</id>
+    <published>2018-11-06T07:48:43.000Z</published>
+    <updated>2018-11-07T10:36:19.425Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;br&gt;    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作…&lt;/p&gt;
+&lt;h3 id=&quot;一-准备工作&quot;&gt;&lt;a href=&quot;#一-准备工作&quot; class=&quot;headerlink&quot; title=&quot;一.准备工作&quot;&gt;&lt;/a&gt;一.准备工作&lt;/h3&gt;&lt;h4 id=&quot;1-安装git&quot;&gt;&lt;a href=&quot;#1-安装git&quot; class=&quot;headerlink&quot; title=&quot;1.安装git&quot;&gt;&lt;/a&gt;1.安装git&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2-安装node&quot;&gt;&lt;a href=&quot;#2-安装node&quot; class=&quot;headerlink&quot; title=&quot;2.安装node&quot;&gt;&lt;/a&gt;2.安装node&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;3-注册一个github帐号&quot;&gt;&lt;a href=&quot;#3-注册一个github帐号&quot; class=&quot;headerlink&quot; title=&quot;3.注册一个github帐号&quot;&gt;&lt;/a&gt;3.注册一个github帐号&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;注册地址&lt;/a&gt;, 至于github怎么连通使用, 请自行百度, 本文章不做指导.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>远程过程调用（RPC）的原理与要考虑的问题</title>
+    <link href="http://yoursite.com/2018/08/20/20180820125210/"/>
+    <id>http://yoursite.com/2018/08/20/20180820125210/</id>
+    <published>2018-08-20T04:52:10.000Z</published>
+    <updated>2018-11-07T10:36:03.224Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-相关概念&quot;&gt;&lt;a href=&quot;#一-相关概念&quot; class=&quot;headerlink&quot; title=&quot;一. 相关概念:&quot;&gt;&lt;/a&gt;一. 相关概念:&lt;/h3&gt;&lt;p&gt;1.本地函数调用: 系统是单体应用时,调用接口可以直接new对象,然后调用方法即可.因为在同一个内 存,即同一个地址空间,所以通过方法栈和参数就可实现.&lt;/p&gt;
+&lt;p&gt;2.远程过程调用:在分布式系统中,每个模块功能在不同的服务器上,再想调用某个方法,就不行了,因为本地没有那个类.&lt;/p&gt;
+&lt;p&gt;比如: 想收快递,自己在家时可以自己去接收, 这是本地方法调用; 自己不在家,可以让家中老婆接收,这就好比远程调用. 手机就好比一个代理,代理你发送通讯.进行远程通讯(远程调用).&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="rpc" scheme="http://yoursite.com/tags/rpc/"/>
+    
+  </entry>
+  
+</feed>
