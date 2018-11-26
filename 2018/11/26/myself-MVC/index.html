@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="自己动手写mvc框架spring源码的核心组件: IOC  AOP  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.    当服务器(如tomcat)启动时—&amp;gt;进行加载项目—&amp;gt;spring会把所有的Bean全部创建出来,放进IOC容器.    IOC容器就是一个很大的map对象. 源码为证:">
+<meta name="description" content="自己动手写mvc框架   最近在看自己spring源码和mvc相关的课程,于是就把相关的笔记记在了这里…. 一. spring源码的核心组件: IOC  AOP  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.    当服务器(如tomcat)启动时—&amp;gt;进行加载项目—&amp;gt;spring会把所有的Bean">
 <meta name="keywords" content="mvc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自己动手写mvc框架">
 <meta property="og:url" content="http://yoursite.com/2018/11/26/myself-MVC/index.html">
 <meta property="og:site_name" content="水河澹澹的博客站">
-<meta property="og:description" content="自己动手写mvc框架spring源码的核心组件: IOC  AOP  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.    当服务器(如tomcat)启动时—&amp;gt;进行加载项目—&amp;gt;spring会把所有的Bean全部创建出来,放进IOC容器.    IOC容器就是一个很大的map对象. 源码为证:">
+<meta property="og:description" content="自己动手写mvc框架   最近在看自己spring源码和mvc相关的课程,于是就把相关的笔记记在了这里…. 一. spring源码的核心组件: IOC  AOP  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.    当服务器(如tomcat)启动时—&amp;gt;进行加载项目—&amp;gt;spring会把所有的Bean">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-26T02:54:23.597Z">
+<meta property="og:updated_time" content="2018-11-26T03:20:37.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自己动手写mvc框架">
-<meta name="twitter:description" content="自己动手写mvc框架spring源码的核心组件: IOC  AOP  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.    当服务器(如tomcat)启动时—&amp;gt;进行加载项目—&amp;gt;spring会把所有的Bean全部创建出来,放进IOC容器.    IOC容器就是一个很大的map对象. 源码为证:">
+<meta name="twitter:description" content="自己动手写mvc框架   最近在看自己spring源码和mvc相关的课程,于是就把相关的笔记记在了这里…. 一. spring源码的核心组件: IOC  AOP  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.    当服务器(如tomcat)启动时—&amp;gt;进行加载项目—&amp;gt;spring会把所有的Bean">
 
 
 
@@ -386,9 +386,10 @@
       
 
       
-        <h3 id="自己动手写mvc框架"><a href="#自己动手写mvc框架" class="headerlink" title="自己动手写mvc框架"></a>自己动手写mvc框架</h3><h4 id="spring源码的核心组件-IOC-AOP"><a href="#spring源码的核心组件-IOC-AOP" class="headerlink" title="spring源码的核心组件: IOC  AOP"></a>spring源码的核心组件: IOC  AOP</h4><p>  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.<br>    当服务器(如tomcat)启动时—&gt;进行加载项目—&gt;spring会把所有的Bean全部创建出来,放进IOC容器.<br>    IOC容器就是一个很大的map对象. 源码为证:<br>    [图片]<br>    IOC: Map: map.put(key,val);  key就是声明的beanName, value就是new Obj();<br>    当使用bean时, 就是从容器中get(“beanName”), 返回保存的bean实例.</p>
+        <h3 id="自己动手写mvc框架"><a href="#自己动手写mvc框架" class="headerlink" title="自己动手写mvc框架"></a>自己动手写mvc框架</h3><p>   最近在看自己spring源码和mvc相关的课程,于是就把相关的笔记记在了这里….</p>
+<h4 id="一-spring源码的核心组件-IOC-AOP"><a href="#一-spring源码的核心组件-IOC-AOP" class="headerlink" title="一. spring源码的核心组件: IOC  AOP"></a>一. spring源码的核心组件: IOC  AOP</h4><p>  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.<br>    当服务器(如tomcat)启动时—&gt;进行加载项目—&gt;spring会把所有的Bean全部创建出来,放进IOC容器.<br>    IOC容器就是一个很大的map对象. 源码为证:<br>    [图片]<br>    IOC: Map: map.put(key,val);  key就是声明的beanName, value就是new Obj();<br>    当使用bean时, 就是从容器中get(“beanName”), 返回保存的bean实例.</p>
 <ol start="2">
-<li>AOP面向切面编程,通过预编译的方式和运行期动态代理实现程序功能的统一维护的一种技术<h4 id="MVC核心类-DispatherServlet"><a href="#MVC核心类-DispatherServlet" class="headerlink" title="MVC核心类: DispatherServlet"></a>MVC核心类: DispatherServlet</h4>它继承了httpServlet, 它就是一个servlet</li>
+<li>AOP面向切面编程,通过预编译的方式和运行期动态代理实现程序功能的统一维护的一种技术<h4 id="二-MVC核心类-DispatherServlet"><a href="#二-MVC核心类-DispatherServlet" class="headerlink" title="二. MVC核心类: DispatherServlet"></a>二. MVC核心类: DispatherServlet</h4>它继承了httpServlet, 它就是一个servlet</li>
 </ol>
 
       
@@ -614,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自己动手写mvc框架"><span class="nav-text">自己动手写mvc框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#spring源码的核心组件-IOC-AOP"><span class="nav-text">spring源码的核心组件: IOC  AOP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MVC核心类-DispatherServlet"><span class="nav-text">MVC核心类: DispatherServlet</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自己动手写mvc框架"><span class="nav-text">自己动手写mvc框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-spring源码的核心组件-IOC-AOP"><span class="nav-text">一. spring源码的核心组件: IOC  AOP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-MVC核心类-DispatherServlet"><span class="nav-text">二. MVC核心类: DispatherServlet</span></a></li></ol></li></ol></div>
             
 
           </div>
