@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[test_2018_11_27]]></title>
+    <url>%2F2018%2F11%2F27%2Ftest-2018-11-27%2F</url>
+    <content type="text"><![CDATA[测试]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[自己动手写mvc框架]]></title>
+    <url>%2F2018%2F11%2F26%2Fmyself-MVC%2F</url>
+    <content type="text"><![CDATA[自己动手写mvc框架 最近在看自己spring源码和mvc相关的课程,于是就把相关的笔记记在了这里…. 一. spring源码的核心组件: IOC AOP 1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理. 当服务器(如tomcat)启动时—&gt;进行加载项目—&gt;spring会把所有的Bean全部创建出来,放进IOC容器. IOC容器就是一个很大的map对象. 源码为证: [图片] IOC: Map: map.put(key,val); key就是声明的beanName, value就是new Obj(); 当使用bean时, 就是从容器中get(“beanName”), 返回保存的bean实例. AOP面向切面编程,通过预编译的方式和运行期动态代理实现程序功能的统一维护的一种技术二. MVC核心类: DispatherServlet它继承了httpServlet, 它就是一个servlet]]></content>
+      <categories>
+        <category>spring</category>
+      </categories>
+      <tags>
+        <tag>mvc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用github pages + hexo构建自己的博客网站]]></title>
+    <url>%2F2018%2F11%2F06%2F20181106%2F</url>
+    <content type="text"><![CDATA[前言 本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作… 一.准备工作1.安装git下载地址 2.安装node下载地址 3.注册一个github帐号注册地址, 至于github怎么连通使用, 请自行百度, 本文章不做指导. 二.使用hexo构建博客网站1.安装hexo1$ npm install -g hexo-cli 2.初始化hexo打开git bash, 执行如下代码:1$ hexo init [folder] 说明: 最好新建一个空文件夹, 切换到该目录执行hexo init 命令, 也可以使用 [folder] 参数指定一个路径作为你的博客目录. 3.本地服务启动hexo init完成之后, 一个简单的博客网站就完成了, ,并且自带了主题, 可以在本地启动hexo服务进行预览博客了.执行如下代码:1$ hexo server 说明: 如果报如下错误, 应是hexo server模块没有安装,12$ hexo serverUsage: hexo &lt;command&gt; 执行如下代码安装hexo server:12$ npm install hexo-server --save或者:npm i hexo-server 重新执行hexo server即可, 启动之后, 默认运行在4000端口, 打开浏览器,输入: http://localhost:4000 即可预览。。。如果端口被占用,执行: hexo -p 5000 server ,换成5000端口重新运行即可. 三.发布到github1.新建仓库在你的github新建一个仓库, 仓库名格式必须是: username.github.io, username就是你的github账号名称. 2.建立关联创建完成之后, 复制你的仓库地址,然后打开你博客目录下的_config.yml文件，拉倒最下面，修改deploy为以下代码:1234deploy: type: git repository: git@github.com:peterzhen40/peterzhen40.github.io.git branch: master 注: repository后面就是你刚才复制的仓库地址, 每个分号(“:”)后面有一个英文空格. 3.部署hexo部署到git我们需要安装hexo-deployer-git插件, 执行如下命令:1npm install hexo-deployer-git --save 执行如下命令进行部署:1$ hexo d ##部署,该命令等同于: hexo deploy 部署完成之后, 就可以在 http://username.github.io 地址进行访问了…以后的部署就是这三步了:123$ hexo clean ##清除已经生成的静态页面, $ hexo g ##重新生成静态页面, 该命令等同于: hexo generate$ hexo d ##部署,该命令等同于: hexo deploy 说明:发布到github只需使用上面的hexo d 命令即可, 不要把本地源码发布到github, (如:IDEA本地local change的变动不用管,hexo会帮我们把生成的博客自动提交的) 四.其他相关1.更换主题hexo初始化默认自带一个主题, 名为: landscape, 如果不喜欢, 可以更换. 可以去 主题 找一个自己喜欢的主题, 找到他的仓库地址, 复制仓库地址. 切换到你的博客目录下的/themes/目录下, 执行如下代码: 1$ git clone &quot;你复制的仓库地址&quot; ##即把主题下载下来 找到博客目录下的 _config.yml 文件, 修改theme, theme后面就是你下载的主题名称,(注意分号后面有个英文空格, 比如我的是: theme: hexo-theme-next) 2. hexo常用命令①.新建一个博客文件1hexo new [layout] &quot;name&quot; 会在source/_posts/下生成一个名叫”name”的md文件, 就是你新建的博客.说明: [layout]用来指定文章的布局，默认是post, hexo默认有三种布局，每种布局的路径不同： 布局 路径 post source/_posts page source draft source/_drafts ②.新建一个分类模块1$ hexo new page categories -你会发现你的source文件夹下有了categorcies/index.md，打开index.md文件将title设置为title: 分类, type设置为”categories”-打开主题配置文件_config.yml 找到menu，将categorcies取消注释-要把文章归入分类只需在写文章时,在的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中,如:12title: 分类测试文章标题categories: 分类名 ③.添加标签模块1$ hexo new page tags -同上, 你会发现source文件夹下有了tags/index.md，打开index.md文件将title设置为title: 标签, type设置为”tags”-打开主题配置文件_config.yml, 找到menu，将tags取消注释-给文章添加标签, 只需在文章的顶部标题下方添加tags字段，即可自动创建标签名并归入对应的标签中 ④.添加关于模块1$ hexo new page about -同上, 你会发现source文件夹下有了about/index.md，打开index.md文件即可编辑关于你的信息。-打开 主题配置文件 找到menu，将about取消注释 ⑤.添加搜索功能安装 hexo-generator-searchdb 插件1$ npm install hexo-generator-searchdb --save -打开 站点配置文件 找到Extensions在下面添加下面信息:123456# 搜索search: path: search.xml field: post format: html limit: 10000 ⑥添加阅读全文按钮这个很简单, 只需在文章结尾添加:1&lt;!--more--&gt; 这样, 更多的文章内容就不会显示了，只能点击阅读全文才能看… ⑦修改文章内超链接样式打开文件 themes/next/source/css/_common/components/post/post.styl，在末尾添加12345678910.post-body p a &#123; color: #0593d3; border-bottom: none; border-bottom: 1px solid #0593d3; &amp;:hover &#123; color: #fc6423; border-bottom: none; border-bottom: 1px solid #fc6423; &#125;&#125; ⑧设置网站缩略图标把你的图标文件（png或jpg格式，不是ico文件）放在主题目录themes/next/source/images里，然后打开主题配置文件_config.yml, 找到favicon，将small、medium、apple_touch_icon三个字段的值都设置成/images/图片名.jpg就可以了，其他字段都注释掉。 ⑨去掉文章目录标题的自动编号我们自己写文章的时候一般都会自己带上标题编号，但是默认的主题会给我们带上编号，很是别扭，如何去掉呢？打开主题配置文件，找到number, 设置为false即可, 如下:123456789# Table Of Contents in the Sidebartoc: enable: true # Automatically add list number to toc. number: false # If true, all words will placed on next lines if header width longer then sidebar width. wrap: false 更多hexo知识请查看 hexo官方文档更多主题配置, 请查看主题设置更多hexo插件, 请查看hexo插件 3.markdown语法自己百度去学习吧…]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[远程过程调用（RPC）的原理与要考虑的问题]]></title>
+    <url>%2F2018%2F08%2F20%2F20180820125210%2F</url>
+    <content type="text"><![CDATA[一. 相关概念:1.本地函数调用: 系统是单体应用时,调用接口可以直接new对象,然后调用方法即可.因为在同一个内 存,即同一个地址空间,所以通过方法栈和参数就可实现. 2.远程过程调用:在分布式系统中,每个模块功能在不同的服务器上,再想调用某个方法,就不行了,因为本地没有那个类. 比如: 想收快递,自己在家时可以自己去接收, 这是本地方法调用; 自己不在家,可以让家中老婆接收,这就好比远程调用. 手机就好比一个代理,代理你发送通讯.进行远程通讯(远程调用).也许你会说, 可以模仿B/S架构的调用方式,B服务暴露一个restful接口,然后A服务调用这个restful接口间接调用某个方法. 嗯, 这已经很接近RPC了. 不过,这样每次都需要写一串发送http请求的代码,比如:httpClient.sendRequest..之类的, 最好的方式:是像本地调用一样,让使用者感受不到远程调用的过程, 就像这样: 你会说,可以用代理模式呀, 而且最好和spring IOC一起用,通过注入calculator对象,如果扫描到对象加了一个@reference注解,就给他生成一个代理对象.将代理对象放进容器, 代理对象内部就是通过httpClient来实现RPC远程过程调用的. 二. RPC原理上面这段就是很多RPC框架要解决的问题和解决的原理. 比如dubbo __↑ 三 .RPC要解决的问题:1.分布式系统中,服务之间的调用问题. 2.远程调用时,能像本地调用一样方便,让调用者感知不到远程调用的逻辑 四. RPC实现实际上,RPC很少用到http协议进行数据传输,毕竟只想传输一下数据,何必动用一个文本传输的应用层协议呢, 直接用二进制传输多好,比如直接用java的socket协议. 不管用何种协议进行数据传输，一个完整的RPC过程，都可以用下面这张图来描述： 以左边的Client端为例，Application就是rpc的调用方，Client Stub就是我们上面说到的代理对象，也就是那个看起来像是Calculator的实现类，其实内部是通过rpc方式来进行远程调用的代理对象，至于Client Run-time Library，则是实现远程调用的工具包，比如jdk的Socket，最后通过底层网络实现实现数据的传输。 这个过程中最重要的就是序列化和反序列化了，因为数据传输的数据包必须是二进制的，你直接丢一个Java对象过去，人家不认识，你必须把Java对象序列化为二进制格式，传给Server端，Server端接收到之后，再反序列化为Java对象。 1.目前拥有RMI，webservice，基于http协议的http Client 等成熟方案, 五. 不同协议实现RPC的区别：1.基于TCP协议 实现的RPC由于处于协议栈底层，可更灵活的对协议字段进行定制，减少网络传输字节数，降低网络开销，提高性能，但需要关注底层实现细节，代码量高，由于所定义协议的局限，平台和社区支持性好，难以实现跨平台调用，不同的终端需要开发不同的工具包来进行请求发送和响应解析，工作量大， 2.基于http协议 实现的RPC可以使用json和xml格式的响应数据，且作为通用格式标准，开源的工具相对成熟，开发简单； 通过代码优化和使用gzip数据压缩，能缩小与tcp传输性能的差距，所以具有很大优势 3.RESTful风格与RPC1.这两者并不是一个维度的概念，总得来说RPC涉及的维度更广.如果硬要比较，那么可以从RPC风格的url和Restful风格的url上进行比较。 比如你提供一个查询订单的接口，用RPC风格，你可能会这样写： /queryOrder?orderId=123 用Restful风格可以这样写:Get: /order?orderId=123 甚至更精炼:/order/123 2.RPC是面向过程，Restful是面向资源，并且使用了Http动词。 从这个维度上看，Restful风格的url在表述的精简性、可读性上都要更好。 4.RPC 与 RMI 的区别严格来说这两者也不是一个维度的。 RMI: 是Java提供的一种访问远程对象的协议，是已经实现好了，可以直接用了。 RPC:只是一种编程模型，并没有规定你具体要怎样实现，你甚至都可以在你的RPC框架里面使用RMI来实现数据的传输，比如Dubbo 六:RPC要考虑的问题要实现一个RPC不算难，难的是实现一个高性能高可靠的RPC框架。 如果是分布式,一个服务可能有多个实例，在调用时，要如何获取这些实例的地址呢？ 这时就需要一个服务注册中心，比如在Dubbo里头，就可以使用Zookeeper作为注册中心，在调用时，从Zookeeper获取服务的实例列表，再从中选择一个进行调用。 选哪个调用好呢？这时候就需要负载均衡了，于是你又得考虑如何实现负载均衡，比如Dubbo就提供了好几种负载均衡策略。 还有，总不能每次调用时都去注册中心查询实例列表吧，这样效率很低，于是又有了缓存，有了缓存，就要考虑缓存更新问题，等等。 客户端不能每次调用完都干等着服务端返回数据吧，于是就要支持异步调用； 服务端的接口被修改了，老的接口还有人在用，怎么办？总不能让他们都改了吧？这就需要版本控制了； 服务端总不能每次接到请求都马上启动一个线程去处理吧？于是就需要线程池； 服务端关闭时，还没处理完的请求怎么办？是直接结束呢，还是等全部请求处理完再关闭呢？ 等等……..如此种种，都是一个优秀的RPC框架需要考虑的问题。 该篇笔记来源于一篇帖子的整理，，具体的帖子地址忘了留存。。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>rpc</tag>
+      </tags>
+  </entry>
+</search>
