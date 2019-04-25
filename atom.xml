@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>水河澹澹的博客站</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-04-25T07:16:12.398Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>tantaizhijun</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java线程池实现原理</title>
+    <link href="http://yoursite.com/2019/04/14/java%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2019/04/14/java线程池实现原理/</id>
+    <published>2019-04-14T06:04:36.000Z</published>
+    <updated>2019-04-25T07:16:12.398Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-如何自己实现一个线程池&quot;&gt;&lt;a href=&quot;#1-如何自己实现一个线程池&quot; class=&quot;headerlink&quot; title=&quot;1.如何自己实现一个线程池&quot;&gt;&lt;/a&gt;1.如何自己实现一个线程池&lt;/h2&gt;&lt;h4 id=&quot;实现线程池需要准备的东西&quot;&gt;&lt;a href=&quot;#实现线程池需要准备的东西&quot; class=&quot;headerlink&quot; title=&quot;实现线程池需要准备的东西&quot;&gt;&lt;/a&gt;实现线程池需要准备的东西&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;存放线程的&lt;strong&gt;集合&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;存放任务的&lt;strong&gt;队列&lt;/strong&gt;：每有一个任务分配给线程池，我们就从线程池中分配一个线程处理它。但当线程池中的线程都在运行状态，没有空闲线程时，我们还需要一个队列来存储提交给线程池的任务。&lt;br&gt;另外还有，初始化线程池，是否要指定线程池的大小？要保存当前运行线程的数目等。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>垃圾收集器与内存分配策略（jvm第三章）</title>
+    <link href="http://yoursite.com/2019/04/01/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E4%B8%8E%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5%EF%BC%88jvm%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/04/01/垃圾收集器与内存分配策略（jvm第三章）/</id>
+    <published>2019-04-01T10:11:47.000Z</published>
+    <updated>2019-04-25T07:10:20.150Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-那些对象需要回收？&quot;&gt;&lt;a href=&quot;#1-那些对象需要回收？&quot; class=&quot;headerlink&quot; title=&quot;1.那些对象需要回收？&quot;&gt;&lt;/a&gt;1.那些对象需要回收？&lt;/h3&gt;&lt;p&gt;如何判断对象是垃圾需要回收呢？一般有两种方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;引用计数器算法&lt;/p&gt;
+&lt;p&gt;  给对象添加一个引用计数器，每当一个地方引用时，计数器就加一，当引用失效时减一，&lt;br&gt;  任何时刻计数器为0的对象就是不可能再被引用的，&lt;br&gt;  主流的java虚拟机都不用此算法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;特点：实现简单，判定效率也很高.&lt;/li&gt;
+&lt;li&gt;缺点：很难解决对象之间的互相循环引用的问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可达性算法&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="jvm" scheme="http://yoursite.com/categories/jvm/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>spring mvc拦截器工作原理</title>
+    <link href="http://yoursite.com/2019/03/31/spring-mvc%E6%8B%A6%E6%88%AA%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2019/03/31/spring-mvc拦截器工作原理/</id>
+    <published>2019-03-31T07:25:49.000Z</published>
+    <updated>2019-04-25T07:16:12.391Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-spring-mvc拦截器简介&quot;&gt;&lt;a href=&quot;#1-spring-mvc拦截器简介&quot; class=&quot;headerlink&quot; title=&quot;1.spring mvc拦截器简介&quot;&gt;&lt;/a&gt;1.spring mvc拦截器简介&lt;/h3&gt;&lt;p&gt;   Spring Web MVC的处理器拦截器（如无特殊说明，下文所说的拦截器即处理器拦截器）类似于Servlet开发中的过滤器Filter，用于对处理器进行预处理和后处理。&lt;/p&gt;
+&lt;h3 id=&quot;2-应用场景&quot;&gt;&lt;a href=&quot;#2-应用场景&quot; class=&quot;headerlink&quot; title=&quot;2.应用场景&quot;&gt;&lt;/a&gt;2.应用场景&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="spring mvc" scheme="http://yoursite.com/categories/spring-mvc/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>读书笔记：深入分布式缓存 从原理到实践</title>
+    <link href="http://yoursite.com/2019/03/27/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%B7%B1%E5%85%A5%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98-%E4%BB%8E%E5%8E%9F%E7%90%86%E5%88%B0%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://yoursite.com/2019/03/27/读书笔记：深入分布式缓存-从原理到实践/</id>
+    <published>2019-03-27T07:14:38.000Z</published>
+    <updated>2019-04-25T07:16:12.394Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;   &lt;em&gt;读书笔记，简单记录读书过程中的主要知识点&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;第一章-缓存为王&quot;&gt;&lt;a href=&quot;#第一章-缓存为王&quot; class=&quot;headerlink&quot; title=&quot;第一章 缓存为王&quot;&gt;&lt;/a&gt;第一章 缓存为王&lt;/h3&gt;&lt;h4 id=&quot;1-几个概念&quot;&gt;&lt;a href=&quot;#1-几个概念&quot; class=&quot;headerlink&quot; title=&quot;1.几个概念&quot;&gt;&lt;/a&gt;1.几个概念&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1.缓存:&lt;/strong&gt; 存储在计算机上的一个原始数据复制集， 以便于访问。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2.CPU的缓存:&lt;/strong&gt; 指位于CPU与内存之间的临时存储器,容量比内存小得多但交换速度却比内存要快得多.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3.影响用户体验的因素:&lt;/strong&gt; 使用者的状态、系统性能、环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;4.系统性能的指标一般包括:&lt;/strong&gt; 响应时间、延迟时间、吞吐量、并发用户数和资源利用率等.&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2019年新年起始</title>
+    <link href="http://yoursite.com/2019/01/01/20190101/"/>
+    <id>http://yoursite.com/2019/01/01/20190101/</id>
+    <published>2019-01-01T07:39:09.000Z</published>
+    <updated>2019-01-14T14:24:37.552Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天是2019年的新年第一天, &lt;/p&gt;
+&lt;p&gt;2018年已成往事, &lt;/p&gt;
+&lt;p&gt;重整身心,&lt;/p&gt;
+&lt;p&gt;继续出发.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;希望一切安好…开心,
+        
+      
+    
+    </summary>
+    
+      <category term="心灵记事" scheme="http://yoursite.com/categories/%E5%BF%83%E7%81%B5%E8%AE%B0%E4%BA%8B/"/>
+    
+    
+      <category term="随记" scheme="http://yoursite.com/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring系统架构与源码解读笔记</title>
+    <link href="http://yoursite.com/2018/12/23/spring%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E4%B8%8E%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/12/23/spring系统架构与源码解读笔记/</id>
+    <published>2018-12-23T13:50:20.000Z</published>
+    <updated>2019-04-25T07:10:20.149Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-spring系统架构&quot;&gt;&lt;a href=&quot;#一-spring系统架构&quot; class=&quot;headerlink&quot; title=&quot;一. spring系统架构&quot;&gt;&lt;/a&gt;一. spring系统架构&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;spring总共大约有20个模块, 由1300多个文件构成. 这些组件被分别整合在以下6个模块集合中:
+    - 核心容器(Core Container)
+    - AOP(Aspect Oriented Programming)
+    - 设备支持(Instrumentaion)
+    - 数据访问与集成(Data Access/Integration)
+    - Web
+    - 报文发送(Messaging)
+    - Test
+    具体如下图:
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="spring" scheme="http://yoursite.com/categories/spring/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>阿里面试: 一个http请求,springMvc是如何找到对应的方法进行执行的?</title>
+    <link href="http://yoursite.com/2018/12/05/%E9%98%BF%E9%87%8C%E9%9D%A2%E8%AF%95-%E4%B8%80%E4%B8%AAhttp%E8%AF%B7%E6%B1%82-springMvc%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%BE%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9A%84%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E6%89%A7%E8%A1%8C%E7%9A%84/"/>
+    <id>http://yoursite.com/2018/12/05/阿里面试-一个http请求-springMvc是如何找到对应的方法进行执行的/</id>
+    <published>2018-12-05T03:18:42.000Z</published>
+    <updated>2019-01-14T14:24:37.555Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在看spring mvc的相关源码,写了一个mvc框架小demo, 正好今天看到这个面试题,就把相关的只是点记录一下:&lt;br&gt;还不够详细…回头看完了源码,再补充….&lt;/p&gt;
+&lt;h3 id=&quot;1-启动时方法的注册判断&quot;&gt;&lt;a href=&quot;#1-启动时方法的注册判断&quot; class=&quot;headerlink&quot; title=&quot;1.启动时方法的注册判断&quot;&gt;&lt;/a&gt;1.启动时方法的注册判断&lt;/h3&gt;&lt;p&gt;读过spring源码的同学应该都知道, spring在项目启动时, 会扫描所有的类, 为他们创建对应的bean并放进容器,&lt;br&gt;其实, spring mvc原理也一样,&lt;br&gt;在项目启动时, 扫描所有的类的时候,会判断每个类上是否有相应的注解(如@controller,@service,@repository等),&lt;br&gt;会判断每个类上是否有controller和requestMapping注解,然后把他们的方法拿到注册中心(detectHandlerMethods())进行注册..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;详细源码看图:&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;/2018/12/05/阿里面试-一个http请求-springMvc是如何找到对应的方法进行执行的/./1.png&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="spring" scheme="http://yoursite.com/categories/spring/"/>
+    
+    
+      <category term="springMvc" scheme="http://yoursite.com/tags/springMvc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己动手写mvc框架</title>
+    <link href="http://yoursite.com/2018/11/26/myself-MVC/"/>
+    <id>http://yoursite.com/2018/11/26/myself-MVC/</id>
+    <published>2018-11-26T02:45:42.000Z</published>
+    <updated>2019-04-25T07:16:12.396Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;自己动手写mvc框架&quot;&gt;&lt;a href=&quot;#自己动手写mvc框架&quot; class=&quot;headerlink&quot; title=&quot;自己动手写mvc框架&quot;&gt;&lt;/a&gt;自己动手写mvc框架&lt;/h3&gt;&lt;p&gt;   最近在看自己spring源码和mvc相关的课程,于是就把相关的笔记记在了这里….&lt;/p&gt;
+&lt;h4 id=&quot;一-spring源码的核心组件-IOC-AOP&quot;&gt;&lt;a href=&quot;#一-spring源码的核心组件-IOC-AOP&quot; class=&quot;headerlink&quot; title=&quot;一. spring源码的核心组件: IOC  AOP&quot;&gt;&lt;/a&gt;一. spring源码的核心组件: IOC  AOP&lt;/h4&gt;&lt;p&gt;  1.IOC容器: 负责实例化, 定位, 配置应用程序中的对象及建立这些对象之间的依赖.比如对orderService的生命周期的管理.&lt;br&gt;    当服务器(如tomcat)启动时—&amp;gt;进行加载项目—&amp;gt;spring会把所有的Bean全部创建出来,放进IOC容器.&lt;br&gt;    IOC容器就是一个很大的map对象. 源码为证:&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="spring" scheme="http://yoursite.com/categories/spring/"/>
+    
+    
+      <category term="mvc" scheme="http://yoursite.com/tags/mvc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>远程过程调用（RPC）的原理与要考虑的问题</title>
+    <link href="http://yoursite.com/2018/08/20/%E8%BF%9C%E7%A8%8B%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8(RPC)%E5%8E%9F%E7%90%86%E4%B8%8E%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/20/远程过程调用(RPC)原理与相关问题/</id>
+    <published>2018-08-20T04:52:10.000Z</published>
+    <updated>2019-01-14T14:24:37.555Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-相关概念&quot;&gt;&lt;a href=&quot;#一-相关概念&quot; class=&quot;headerlink&quot; title=&quot;一. 相关概念:&quot;&gt;&lt;/a&gt;一. 相关概念:&lt;/h3&gt;&lt;p&gt;1.本地函数调用: 系统是单体应用时,调用接口可以直接new对象,然后调用方法即可.因为在同一个内 存,即同一个地址空间,所以通过方法栈和参数就可实现.&lt;/p&gt;
+&lt;p&gt;2.远程过程调用:在分布式系统中,每个模块功能在不同的服务器上,再想调用某个方法,就不行了,因为本地没有那个类.&lt;/p&gt;
+&lt;p&gt;比如: 想收快递,自己在家时可以自己去接收, 这是本地方法调用; 自己不在家,可以让家中老婆接收,这就好比远程调用. 手机就好比一个代理,代理你发送通讯.进行远程通讯(远程调用).&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="rpc" scheme="http://yoursite.com/tags/rpc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用github pages + hexo构建自己的博客网站</title>
+    <link href="http://yoursite.com/2018/08/19/%E4%BD%BF%E7%94%A8githubPage%E4%B8%8Ehexo%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2018/08/19/使用githubPage与hexo构建静态博客/</id>
+    <published>2018-08-19T07:48:43.000Z</published>
+    <updated>2019-04-25T07:13:19.594Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;br&gt;    本文章只对github pages + hexo构建博客网站做简要指导, 请做好以下软件安装准备工作…&lt;/p&gt;
+&lt;h3 id=&quot;一-准备工作&quot;&gt;&lt;a href=&quot;#一-准备工作&quot; class=&quot;headerlink&quot; title=&quot;一.准备工作&quot;&gt;&lt;/a&gt;一.准备工作&lt;/h3&gt;&lt;h4 id=&quot;1-安装git&quot;&gt;&lt;a href=&quot;#1-安装git&quot; class=&quot;headerlink&quot; title=&quot;1.安装git&quot;&gt;&lt;/a&gt;1.安装git&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2-安装node&quot;&gt;&lt;a href=&quot;#2-安装node&quot; class=&quot;headerlink&quot; title=&quot;2.安装node&quot;&gt;&lt;/a&gt;2.安装node&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;3-注册一个github帐号&quot;&gt;&lt;a href=&quot;#3-注册一个github帐号&quot; class=&quot;headerlink&quot; title=&quot;3.注册一个github帐号&quot;&gt;&lt;/a&gt;3.注册一个github帐号&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;注册地址&lt;/a&gt;, 至于github怎么连通使用, 请自行百度, 本文章不做指导.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+</feed>
